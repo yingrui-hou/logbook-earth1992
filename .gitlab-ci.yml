@@ -1,14 +1,10 @@
+# The Docker image that will be used to build your app
 image: registry.gitlab.com/pages/hugo:latest
-
-variables:
-  HUGO_ENV: production
-  HUGO_ENABLEGITINFO: "true"
-
-pages:
-  script:
-    - hugo --minify --baseURL "$CI_PAGES_URL/"
-  artifacts:
-    paths:
-      - public
-  only:
-    - main
+create-pages:
+  pages:
+    # The folder that contains the files to be exposed at the Page URL
+    publish: public
+  rules:
+    # This ensures that only pushes to the default branch will trigger
+    # a pages deploy
+    - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
