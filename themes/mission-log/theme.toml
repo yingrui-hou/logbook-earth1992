@@ -1,0 +1,8 @@
+name = "mission-log"
+license = "MIT"
+licenselink = "https://opensource.org/licenses/MIT"
+min_version = "0.111.0"
+
+[author]
+  name = "Mission Log Theme"
+  homepage = "https://gitlab.com/yihoupages/logbook"
