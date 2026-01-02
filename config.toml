@@ -7,7 +7,7 @@ defaultContentLanguage = "en"
 
 timezone = "UTC"
 
-disableKinds = ["taxonomy", "taxonomyTerm"]
+disableKinds = ["taxonomy"]
 
 dateFormat = "2006-01-02"
 
