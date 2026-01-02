@@ -15,7 +15,7 @@ tags = ["mission", "log"]
 
 [params]
   description = "Field notes in English, français, 中文"
-  author = "Flight Crew"
+  author = "A Normal Woman"
   # Accent colors for the logbook-earth1992 theme
   primary = "#1f3a52"
   secondary = "#7aa4c2"
