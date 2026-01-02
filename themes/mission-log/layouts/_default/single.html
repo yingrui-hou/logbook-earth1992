@@ -1,0 +1,18 @@
+{{ define "main" }}
+  <article class="entry">
+    <div class="entry__meta">
+      <p class="eyebrow">Mission Log</p>
+      <h1>{{ .Title }}</h1>
+      <div class="entry__dateline">
+        <span>{{ .Date.Format "2006-01-02" }}</span>
+        {{ with .Params.tags }}<span class="entry__tags">{{ range $i, $t := . }}{{ if $i }}, {{ end }}{{ $t }}{{ end }}</span>{{ end }}
+      </div>
+    </div>
+    <div class="entry__body">
+      {{ .Content }}
+    </div>
+    <div class="entry__footer">
+      <a href="{{ relURL "/posts/" }}">← Back to missions</a>
+    </div>
+  </article>
+{{ end }}

@@ -1,0 +1,14 @@
+image: registry.gitlab.com/pages/hugo:latest
+
+variables:
+  HUGO_ENV: production
+  HUGO_ENABLEGITINFO: "true"
+
+pages:
+  script:
+    - hugo --minify
+  artifacts:
+    paths:
+      - public
+  only:
+    - main

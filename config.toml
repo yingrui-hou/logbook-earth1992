@@ -1,0 +1,40 @@
+baseURL = "https://yihoupages.gitlab.io/logbook/"
+title = "Mission Logbook"
+theme = "mission-log"
+languageCode = "en"
+enableRobotsTXT = true
+defaultContentLanguage = "en"
+
+timezone = "UTC"
+
+disableKinds = ["taxonomy", "taxonomyTerm"]
+
+dateFormat = "2006-01-02"
+
+tags = ["mission", "log"]
+
+[params]
+  description = "Field notes in English, français, 中文"
+  author = "Flight Crew"
+  # Accent colors for the logbook theme
+  primary = "#1f3a52"
+  secondary = "#7aa4c2"
+  paper = "#f3f1e6"
+  ink = "#1c1c1c"
+  grid = "rgba(31, 58, 82, 0.16)"
+  highlight = "#ffd479"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.tableOfContents]
+    endLevel = 3
+    ordered = false
+    startLevel = 2
+
+[outputs]
+  home = ["HTML", "RSS"]
+
+[permalinks]
+  posts = "/posts/:year/:month/:day/:slug/"

@@ -1,0 +1,8 @@
+{{ partial "head.html" . }}
+<main class="sheet">
+  {{ partial "header.html" . }}
+  <section class="content">
+    {{ block "main" . }}{{ end }}
+  </section>
+  {{ partial "footer.html" . }}
+</main>

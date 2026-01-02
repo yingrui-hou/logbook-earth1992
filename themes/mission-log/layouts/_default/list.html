@@ -1,0 +1,21 @@
+{{ define "main" }}
+  <header class="section-header">
+    <p class="eyebrow">Mission Index</p>
+    <h1>{{ .Title }}</h1>
+    {{ with .Description }}<p>{{ . }}</p>{{ end }}
+  </header>
+  <div class="grid">
+    {{ range .Paginator.Pages }}
+      <article class="card">
+        <div class="card__meta">
+          <span class="card__date">{{ .Date.Format "2006-01-02" }}</span>
+          {{ with .Params.tags }}<span class="card__tags">{{ delimit . ", " }}</span>{{ end }}
+        </div>
+        <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+        {{ with .Summary }}<p>{{ . }}</p>{{ end }}
+        <a class="card__cta" href="{{ .RelPermalink }}">Read log →</a>
+      </article>
+    {{ end }}
+  </div>
+  {{ template "partials/pagination.html" . }}
+{{ end }}

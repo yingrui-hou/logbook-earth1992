@@ -1,0 +1,12 @@
+{{- $style := resources.Get "css/main.css" | resources.ExecuteAsTemplate "css/main.css" . | resources.Minify -}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} · {{ .Site.Title }}{{ end }}</title>
+  {{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
+  {{ if .IsHome }}<link rel="alternate" type="application/rss+xml" title="RSS" href="{{ "index.xml" | relURL }}">{{ end }}
+  <link rel="stylesheet" href="{{ $style.RelPermalink }}">
+</head>
+<body class="page">
