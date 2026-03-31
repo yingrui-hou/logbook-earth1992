@@ -1,13 +1,13 @@
 <header class="masthead">
   <div class="masthead__inner">
     <div>
-      <a class="brand" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+      <a class="brand" href="{{ .Site.Home.RelPermalink }}">{{ .Site.Title }}</a>
       {{ with .Site.Params.description }}<div class="brand__tagline">{{ . }}</div>{{ end }}
     </div>
     <nav class="nav">
-      <a href="{{ relURL "/" }}">Home</a>
-      <a href="{{ relURL "/posts/" }}">Logs</a>
-      <a href="{{ relURL "/index.xml" }}">RSS</a>
+      <a href="{{ .Site.Home.RelPermalink }}">Home</a>
+      <a href="{{ "posts/" | relURL }}">Logs</a>
+      <a href="{{ "index.xml" | relURL }}">RSS</a>
     </nav>
   </div>
 </header>
