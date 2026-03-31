@@ -1,4 +1,4 @@
 ---
 title: "Mission Archive"
-description: "Chronological flight and field notes."
+description: "Boring / interesting (micro)adventure notes."
 ---
