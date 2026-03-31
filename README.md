@@ -1,1 +1,1 @@
-The webpage can be found [here](https://logbook-earth1992-637096.gitlab.io/)
+The webpage can be found [here](https://yihoupages.gitlab.io/logbook-earth1992/)
